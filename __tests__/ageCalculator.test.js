@@ -26,7 +26,7 @@ describe('AgeCalculator', () => {
 		expect(ageCalculator.jupiterAge).toEqual(1);
 	});
 
-	test("Should create an age calculator object with the proper Earth life expectancy", () => {
-		expect(ageCalculator.earthLifeExpectancy).toEqual(73);
+	test("Should create an age calculator object with the proper Earth years left to live. For example, if someone is 22 with a life expectancy of 95, their Earth years left to live is 95 - 22 = 73.", () => {
+		expect(ageCalculator.earthYearsLeftToLive).toEqual(73);
 	});
 });
