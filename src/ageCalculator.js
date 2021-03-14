@@ -14,6 +14,11 @@ export default class AgeCalculator {
 		this.jupiterAge = this.calculateJupiterAge();
 
 		this.earthLifeExpectancy = earthLifeExpectancy;
+		this.earthYearsLeftToLive = this.calculateYearsLeftToLive(earthAge, earthLifeExpectancy);
+	}
+
+	calculateYearsLeftToLive(age, lifeExpectancy) {
+		return lifeExpectancy - age;
 	}
 
 	calculatePlanetAge(planetName) {
