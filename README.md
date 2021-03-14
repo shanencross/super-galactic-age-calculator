@@ -1,8 +1,8 @@
-# _{Application Name}_
+# Super Galactic Age Calculator
 
-#### _{Brief description of application}_
+#### Learning project for Epicodus class, practicing Test Driven Development -- Calculates age on other planets 
 
-#### By _**{List of contributors}**_
+#### By Shanen Cross
 
 ## Technologies Used
 
@@ -12,20 +12,38 @@
 * JavaScript
 * jQuery
 * Webpack
+* Jest
+* ESLint
+* Babel
 
 ## Description
 
-_{This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have.}_
+Learning project made for Epicodus school, to practice Test Driven Development. Application which will calculate the user's age on other planets, given their age in Earth years.
+
+The appplication will output the user's name in:
+
+* Mercury years. (A Mercury year is .24 Earth years.)
+* Venus years. (A Venus year is .62 Earth years.)
+* Mars years. (A Mars year is 1.88 Earth years.)
+* Jupiter years. (A Jupiter year is 11.86 Earth years.)
+
+The user will also provide the average life expectancy for their demographic as input, and the application will output their life expectancy on each of the above planets as well. If the user has already surpassed their life expectancy, the application will output the number of years they have lived past their life expectancy.
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
+To install and run locally:
+* Install git
+* Install [npm](https://www.npmjs.com/), the JavaScript package manager. For development, I used npm version 6.14.10
+* Use _git clone_ this repository to a local directory
+* Install the necessary modules by executing _npm install_ on the command line
+* Excute _npm run start_ on the command line to build the project and run a local server. The website will automatically open in your web browser
+* OR, execute _npm run build_ on the command line to build the project, and then open dist/index.html in your web browser.
 
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this application depends on? We recommend deleting the project from your desktop, re-cloning the project from GitHub, and writing down all the steps necessary to get the project working again.}_
+To run the tests for the project:
+* Execute _npm run test_ on the command line in the project directory, after installing
+
+To view online:
+* Visit https://shanencross.github.io/super-galactic-age-calculator/
 
 ## Known Bugs
 
