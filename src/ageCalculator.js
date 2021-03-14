@@ -1,5 +1,6 @@
 export default class AgeCalculator {
 	constructor(earthAge, earthLifeExpectancy) {
+		// Maps planet names to conversion factors for years
 		this.planetYearsPerEarthYear = {
 			"earth": 1,
 			"mercury": 0.24,
@@ -9,10 +10,10 @@ export default class AgeCalculator {
 		}
 
 		this.earthAge = earthAge;
-		this.mercuryAge = this.calculateMercuryAge();
-		this.venusAge = this.caluclateVenusAge();
-		this.marsAge = this.calculateMarsAge();
-		this.jupiterAge = this.calculateJupiterAge();
+		this.mercuryAge = this.calculatePlanetAge("mercury");
+		this.venusAge = this.calculatePlanetAge("venus");
+		this.marsAge = this.calculatePlanetAge("mars");
+		this.jupiterAge = this.calculatePlanetAge("jupiter");
 
 		this.earthLifeExpectancy = earthLifeExpectancy;
 		
@@ -23,37 +24,29 @@ export default class AgeCalculator {
 		this.jupiterYearsLeftToLive = this.calculateYearsLeftToLive("jupiter");
 	}
 
+	// Calculate the user's years left to live for a given planet.
+	// If the user is older than their life expectancy, the years left to live
+	// will be a negative number. This is the number of years they have lived
+	// PAST their life expectancy.
+	// The value is rounded normally.
 	calculateYearsLeftToLive(planetName) {
 		const yearsLeftToLive = this.earthLifeExpectancy - this.earthAge;
 		return Math.round(yearsLeftToLive / this.planetYearsPerEarthYear[planetName]);
 	}
 
+	// Calculate the user's age for a given planet.
+	// The value is always rounded DOWN, as is the norm for ages.
 	calculatePlanetAge(planetName) {
 		return Math.floor(this.earthAge / this.planetYearsPerEarthYear[planetName]);
 	}
 
-	calculateMercuryAge() {
-		return this.calculatePlanetAge("mercury");
-	}
-
-	caluclateVenusAge() {
-		return this.calculatePlanetAge("venus");
-	}
-
-	calculateMarsAge() {
-		return this.calculatePlanetAge("mars");
-	}
-
-	calculateJupiterAge() {
-		return this.calculatePlanetAge("jupiter");
-	}
-
+	// Output a string for a given number of years. For example, 22 yields '22 years'.
+	// Likewise, 1 yields '1 year'.
 	outputYear(years) {
 		let yearString = "year";
 		if (years !== 1) {
 			yearString = `${yearString}s`;
 		}
-
 		return `${years} ${yearString}`;
 	}
 }
