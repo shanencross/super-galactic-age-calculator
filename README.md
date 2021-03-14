@@ -27,7 +27,7 @@ The appplication will output the user's name in:
 * Mars years. (A Mars year is 1.88 Earth years.)
 * Jupiter years. (A Jupiter year is 11.86 Earth years.)
 
-The user will also provide the average life expectancy for their demographic as input, and the application will output their life expectancy on each of the above planets as well. If the user has already surpassed their life expectancy, the application will output the number of years they have lived past their life expectancy.
+The user will also provide the average life expectancy for their demographic as input, and the application will output the years they have left to live, in any planet's years. If the user has already surpassed their life expectancy, the application will output the number of years they have lived past their life expectancy.
 
 ## Setup/Installation Requirements
 
