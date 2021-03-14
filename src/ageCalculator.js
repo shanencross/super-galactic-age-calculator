@@ -1,5 +1,5 @@
 export default class AgeCalculator {
-	constructor(earthAge) {
+	constructor(earthAge, earthLifeExpectancy) {
 		this.planetYearsPerEarthYear = {
 			"mercury": 0.24,
 			"venus": 0.62,
@@ -12,6 +12,8 @@ export default class AgeCalculator {
 		this.venusAge = this.caluclateVenusAge();
 		this.marsAge = this.calculateMarsAge();
 		this.jupiterAge = this.calculateJupiterAge();
+
+		this.earthLifeExpectancy = earthLifeExpectancy;
 	}
 
 	calculatePlanetAge(planetName) {
