@@ -1,5 +1,5 @@
 export default class AgeCalculator {
-	constructor() {
-
+	constructor(earthAge) {
+		this.earthAge = earthAge;
 	}
 }
