@@ -47,4 +47,8 @@ export default class AgeCalculator {
 	calculateJupiterAge() {
 		return this.calculatePlanetAge("jupiter");
 	}
+
+	outputYear() {
+
+	}
 }
