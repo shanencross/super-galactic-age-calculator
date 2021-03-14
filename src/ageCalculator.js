@@ -1,10 +1,10 @@
 export default class AgeCalculator {
 	constructor(earthAge) {
 		this.planetYearsPerEarthYear = {
-			"Mercury": 0.24,
-			"Venus": 0.62,
-			"Mars": 1.88,
-			"Jupiter": 11.86
+			"mercury": 0.24,
+			"venus": 0.62,
+			"mars": 1.88,
+			"jupiter": 11.86
 		}
 
 		this.earthAge = earthAge;
@@ -19,18 +19,18 @@ export default class AgeCalculator {
 	}
 
 	calculateMercuryAge() {
-		return this.calculatePlanetAge("Mercury");
+		return this.calculatePlanetAge("mercury");
 	}
 
 	caluclateVenusAge() {
-		return this.calculatePlanetAge("Venus");
+		return this.calculatePlanetAge("venus");
 	}
 
 	calculateMarsAge() {
-		return this.calculatePlanetAge("Mars");
+		return this.calculatePlanetAge("mars");
 	}
 
 	calculateJupiterAge() {
-		return this.calculatePlanetAge("Jupiter");
+		return this.calculatePlanetAge("jupiter");
 	}
 }
