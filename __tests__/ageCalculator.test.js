@@ -3,7 +3,8 @@ import AgeCalculator from "./../src/ageCalculator.js"
 describe('AgeCalculator', () => {
 	let ageCalculator;
 	beforeEach(() => {
-		ageCalculator = new AgeCalculator(22);
+		// Sample ageCalculator with Earth age of 22, and life expetancy of 95
+		ageCalculator = new AgeCalculator(22, 95);
 	});
 	test('Should create an age calculator object with the proper Earth age', () => {
 		expect(ageCalculator.earthAge).toEqual(22);
@@ -23,5 +24,9 @@ describe('AgeCalculator', () => {
 
 	test('Should create an age calculator object with the proper Jupiter age. 1 Jupiter year is 11.86 Earth years.', () => {
 		expect(ageCalculator.jupiterAge).toEqual(1);
+	});
+
+	test("Should create an age calculator object with the proper Earth life expectancy", () => {
+		expect(ageCalculator.earthLifeExpectancy).toEqual(95);
 	});
 });
