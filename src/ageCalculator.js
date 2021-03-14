@@ -1,6 +1,7 @@
 export default class AgeCalculator {
 	constructor(earthAge, earthLifeExpectancy) {
 		this.planetYearsPerEarthYear = {
+			"earth": 1,
 			"mercury": 0.24,
 			"venus": 0.62,
 			"mars": 1.88,
@@ -14,11 +15,17 @@ export default class AgeCalculator {
 		this.jupiterAge = this.calculateJupiterAge();
 
 		this.earthLifeExpectancy = earthLifeExpectancy;
-		this.earthYearsLeftToLive = this.calculateYearsLeftToLive(earthAge, earthLifeExpectancy);
+		
+		this.earthYearsLeftToLive = this.calculateYearsLeftToLive("earth");
+		this.mercuryYearsLeftToLive = this.calculateYearsLeftToLive("mercury");
+		this.venusYearsLeftToLive = this.calculateYearsLeftToLive("venus");
+		this.marsYearsLeftToLive = this.calculateYearsLeftToLive("mars");
+		this.jupiterYearsLeftToLive = this.calculateYearsLeftToLive("jupiter");
 	}
 
-	calculateYearsLeftToLive(age, lifeExpectancy) {
-		return lifeExpectancy - age;
+	calculateYearsLeftToLive(planetName) {
+		const yearsLeftToLive = this.earthLifeExpectancy - this.earthAge;
+		return Math.round(yearsLeftToLive / this.planetYearsPerEarthYear[planetName]);
 	}
 
 	calculatePlanetAge(planetName) {
