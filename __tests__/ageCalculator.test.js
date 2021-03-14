@@ -29,4 +29,20 @@ describe('AgeCalculator', () => {
 	test("Should create an age calculator object with the proper Earth years left to live. For example, if someone is 22 with a life expectancy of 95, their Earth years left to live is 95 - 22 = 73.", () => {
 		expect(ageCalculator.earthYearsLeftToLive).toEqual(73);
 	});
+
+	test("Should create an age calculator object with the proper Mercury years left to live.", () => {
+		expect(ageCalculator.mercuryYearsLeftToLive).toEqual(304);
+	});
+
+	test("Should create an age calculator object with the proper Venus years left to live.", () => {
+		expect(ageCalculator.venusYearsLeftToLive).toEqual(118);
+	});
+
+	test("Should create an age calculator object with the proper Mars years left to live.", () => {
+		expect(ageCalculator.marsYearsLeftToLive).toEqual(39);
+	});
+
+	test("Should create an age calculator object with the proper Jupiter years left to live.", () => {
+		expect(ageCalculator.jupiterYearsLeftToLive).toEqual(6);
+	});
 });
