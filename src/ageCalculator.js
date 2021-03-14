@@ -48,7 +48,12 @@ export default class AgeCalculator {
 		return this.calculatePlanetAge("jupiter");
 	}
 
-	outputYear() {
+	outputYear(years) {
+		let yearString = "year";
+		if (years !== 1) {
+			yearString = `${yearString}s`;
+		}
 
+		return `${years} ${yearString}`;
 	}
 }
